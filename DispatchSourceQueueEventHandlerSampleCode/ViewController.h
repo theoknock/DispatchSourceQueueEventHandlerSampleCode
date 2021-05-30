@@ -9,6 +9,9 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) dispatch_queue_t   global_dispatch_queue;
+@property (strong, nonatomic) dispatch_source_t  global_dispatch_source;
+
 
 @end
 

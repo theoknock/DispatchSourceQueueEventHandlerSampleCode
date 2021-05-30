@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B92030042664173B0083ACDB /* DispatchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B92030032664173B0083ACDB /* DispatchTest.m */; };
 		B9A8AD06264F15AF00418CBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A8AD05264F15AF00418CBE /* AppDelegate.m */; };
 		B9A8AD09264F15AF00418CBE /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A8AD08264F15AF00418CBE /* SceneDelegate.m */; };
 		B9A8AD0C264F15AF00418CBE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A8AD0B264F15AF00418CBE /* ViewController.m */; };
@@ -14,21 +15,30 @@
 		B9A8AD11264F15B100418CBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9A8AD10264F15B100418CBE /* Assets.xcassets */; };
 		B9A8AD14264F15B100418CBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9A8AD12264F15B100418CBE /* LaunchScreen.storyboard */; };
 		B9A8AD17264F15B100418CBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A8AD16264F15B100418CBE /* main.m */; };
+		B9A8AD1F264F15F600418CBE /* GlobalDispatchSourceQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A8AD1E264F15F600418CBE /* GlobalDispatchSourceQueue.m */; };
+		B9A8AD22264F17DB00418CBE /* DispatchSourceEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A8AD21264F17DB00418CBE /* DispatchSourceEventHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B92030022664173B0083ACDB /* DispatchTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchTest.h; sourceTree = "<group>"; };
+		B92030032664173B0083ACDB /* DispatchTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DispatchTest.m; sourceTree = "<group>"; wrapsLines = 0; };
 		B9A8AD01264F15AF00418CBE /* DispatchSourceQueueEventHandlerSampleCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DispatchSourceQueueEventHandlerSampleCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9A8AD04264F15AF00418CBE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B9A8AD05264F15AF00418CBE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B9A8AD07264F15AF00418CBE /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		B9A8AD08264F15AF00418CBE /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		B9A8AD0A264F15AF00418CBE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B9A8AD0B264F15AF00418CBE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B9A8AD0B264F15AF00418CBE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; wrapsLines = 0; };
 		B9A8AD0E264F15AF00418CBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B9A8AD10264F15B100418CBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9A8AD13264F15B100418CBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B9A8AD15264F15B100418CBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9A8AD16264F15B100418CBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B9A8AD1D264F15F600418CBE /* GlobalDispatchSourceQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalDispatchSourceQueue.h; sourceTree = "<group>"; };
+		B9A8AD1E264F15F600418CBE /* GlobalDispatchSourceQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlobalDispatchSourceQueue.m; sourceTree = "<group>"; wrapsLines = 0; };
+		B9A8AD20264F17DB00418CBE /* DispatchSourceEventHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchSourceEventHandler.h; sourceTree = "<group>"; };
+		B9A8AD21264F17DB00418CBE /* DispatchSourceEventHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DispatchSourceEventHandler.m; sourceTree = "<group>"; wrapsLines = 0; };
+		B9ABC63D2651A83600027F22 /* DispatchSourceObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchSourceObject.h; sourceTree = "<group>"; wrapsLines = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +55,8 @@
 		B9A8ACF8264F15AF00418CBE = {
 			isa = PBXGroup;
 			children = (
+				B92030022664173B0083ACDB /* DispatchTest.h */,
+				B92030032664173B0083ACDB /* DispatchTest.m */,
 				B9A8AD03264F15AF00418CBE /* DispatchSourceQueueEventHandlerSampleCode */,
 				B9A8AD02264F15AF00418CBE /* Products */,
 			);
@@ -72,6 +84,11 @@
 				B9A8AD12264F15B100418CBE /* LaunchScreen.storyboard */,
 				B9A8AD15264F15B100418CBE /* Info.plist */,
 				B9A8AD16264F15B100418CBE /* main.m */,
+				B9A8AD1D264F15F600418CBE /* GlobalDispatchSourceQueue.h */,
+				B9A8AD1E264F15F600418CBE /* GlobalDispatchSourceQueue.m */,
+				B9A8AD20264F17DB00418CBE /* DispatchSourceEventHandler.h */,
+				B9A8AD21264F17DB00418CBE /* DispatchSourceEventHandler.m */,
+				B9ABC63D2651A83600027F22 /* DispatchSourceObject.h */,
 			);
 			path = DispatchSourceQueueEventHandlerSampleCode;
 			sourceTree = "<group>";
@@ -146,7 +163,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9A8AD0C264F15AF00418CBE /* ViewController.m in Sources */,
+				B9A8AD1F264F15F600418CBE /* GlobalDispatchSourceQueue.m in Sources */,
+				B9A8AD22264F17DB00418CBE /* DispatchSourceEventHandler.m in Sources */,
 				B9A8AD06264F15AF00418CBE /* AppDelegate.m in Sources */,
+				B92030042664173B0083ACDB /* DispatchTest.m in Sources */,
 				B9A8AD17264F15B100418CBE /* main.m in Sources */,
 				B9A8AD09264F15AF00418CBE /* SceneDelegate.m in Sources */,
 			);
