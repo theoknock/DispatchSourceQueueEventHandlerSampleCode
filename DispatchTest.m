@@ -53,7 +53,7 @@ static DispatchTest * sharedDispatchTest = NULL;
     if (self != nil)
     {
         //        [GlobalDispatchSourceQueue globalDispatchSourceQueue];
-        event_index = 2;
+        event_index = 0;
         dispatch_queue_t dispatch_queue =  [self textureQueue];
         dispatch_source_t dispatch_source = [self textureQueueEvent];
         
@@ -69,8 +69,7 @@ static DispatchTest * sharedDispatchTest = NULL;
     NSLog(@"%s", __PRETTY_FUNCTION__);
     
     dispatch_async(self->_textureQueue, ^{
-        for (int i = 0; i < 10; i++)
-        {
+        do {
             [self textureQueueEvent];
             struct DispatchSourceObjectInt * dispatch_source_object_int_ptr_1 = randomInt(); //(sizeof(struct DispatchSourceObjectInt));
 //            dispatch_source_object_int_ptr_1->rnd_int = generateRandomInt();
@@ -83,7 +82,7 @@ static DispatchTest * sharedDispatchTest = NULL;
             dispatch_source_merge_data(self->_textureQueueEvent, index);
             
             self->_textureQueueEvent = nil;
-        }
+        } while (event_index < 11);
     });
     
     //    dispatch_source_set_event_handler([[GlobalDispatchSourceQueue globalDispatchSourceQueue] global_dispatch_source], self->_textureQueueEvent); /*^{
