@@ -15,8 +15,6 @@
 		B9A8AD11264F15B100418CBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9A8AD10264F15B100418CBE /* Assets.xcassets */; };
 		B9A8AD14264F15B100418CBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9A8AD12264F15B100418CBE /* LaunchScreen.storyboard */; };
 		B9A8AD17264F15B100418CBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A8AD16264F15B100418CBE /* main.m */; };
-		B9A8AD1F264F15F600418CBE /* GlobalDispatchSourceQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A8AD1E264F15F600418CBE /* GlobalDispatchSourceQueue.m */; };
-		B9A8AD22264F17DB00418CBE /* DispatchSourceEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A8AD21264F17DB00418CBE /* DispatchSourceEventHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,11 +32,6 @@
 		B9A8AD13264F15B100418CBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B9A8AD15264F15B100418CBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9A8AD16264F15B100418CBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B9A8AD1D264F15F600418CBE /* GlobalDispatchSourceQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalDispatchSourceQueue.h; sourceTree = "<group>"; };
-		B9A8AD1E264F15F600418CBE /* GlobalDispatchSourceQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlobalDispatchSourceQueue.m; sourceTree = "<group>"; wrapsLines = 0; };
-		B9A8AD20264F17DB00418CBE /* DispatchSourceEventHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchSourceEventHandler.h; sourceTree = "<group>"; };
-		B9A8AD21264F17DB00418CBE /* DispatchSourceEventHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DispatchSourceEventHandler.m; sourceTree = "<group>"; wrapsLines = 0; };
-		B9ABC63D2651A83600027F22 /* DispatchSourceObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchSourceObject.h; sourceTree = "<group>"; wrapsLines = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,11 +77,6 @@
 				B9A8AD12264F15B100418CBE /* LaunchScreen.storyboard */,
 				B9A8AD15264F15B100418CBE /* Info.plist */,
 				B9A8AD16264F15B100418CBE /* main.m */,
-				B9A8AD1D264F15F600418CBE /* GlobalDispatchSourceQueue.h */,
-				B9A8AD1E264F15F600418CBE /* GlobalDispatchSourceQueue.m */,
-				B9A8AD20264F17DB00418CBE /* DispatchSourceEventHandler.h */,
-				B9A8AD21264F17DB00418CBE /* DispatchSourceEventHandler.m */,
-				B9ABC63D2651A83600027F22 /* DispatchSourceObject.h */,
 			);
 			path = DispatchSourceQueueEventHandlerSampleCode;
 			sourceTree = "<group>";
@@ -163,8 +151,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9A8AD0C264F15AF00418CBE /* ViewController.m in Sources */,
-				B9A8AD1F264F15F600418CBE /* GlobalDispatchSourceQueue.m in Sources */,
-				B9A8AD22264F17DB00418CBE /* DispatchSourceEventHandler.m in Sources */,
 				B9A8AD06264F15AF00418CBE /* AppDelegate.m in Sources */,
 				B92030042664173B0083ACDB /* DispatchTest.m in Sources */,
 				B9A8AD17264F15B100418CBE /* main.m in Sources */,

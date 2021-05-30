@@ -10,6 +10,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DispatchTest : NSObject
+{
+    __block long event_index;
+}
 
 + (nonnull DispatchTest *)sharedDispatchTest;
 - (void)testDispatch;

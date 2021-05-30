@@ -6,10 +6,6 @@
 //
 
 #import "ViewController.h"
-#import "GlobalDispatchSourceQueue.h"
-#import "DispatchSourceEventHandler.h"
-#import "DispatchSourceObject.h"
-
 #import "DispatchTest.h"
 
 @interface ViewController ()
