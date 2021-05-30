@@ -53,9 +53,11 @@ static DispatchTest * sharedDispatchTest = NULL;
     if (self != nil)
     {
         //        [GlobalDispatchSourceQueue globalDispatchSourceQueue];
-        event_index = -1;
-        [self textureQueue];
-        [self textureQueueEvent];
+        event_index = 2;
+        dispatch_queue_t dispatch_queue =  [self textureQueue];
+        dispatch_source_t dispatch_source = [self textureQueueEvent];
+        
+        
     }
     
     return self;
@@ -65,6 +67,20 @@ static DispatchTest * sharedDispatchTest = NULL;
 - (void)testDispatch
 {
     NSLog(@"%s", __PRETTY_FUNCTION__);
+    
+    dispatch_async(self->_textureQueue, ^{
+        
+        struct DispatchSourceObjectInt * dispatch_source_object_int_ptr_1 = malloc(sizeof(struct DispatchSourceObjectInt));
+        dispatch_source_object_int_ptr_1->rnd_int = generateRandomInt();
+        
+        NSInteger index = event_index++;
+        NSLog(@"Setting index = %ld\t\tRandom integer = %d", (long)index, dispatch_source_object_int_ptr_1->rnd_int);
+        //    dispatch_async(GlobalDispatchSourceQueue.global_dispatch_queue, ^{
+        const char *label = [[NSString stringWithFormat:@"%ld", (long)index] cStringUsingEncoding:NSUTF8StringEncoding];
+        dispatch_queue_set_specific(self->_textureQueue, label, &dispatch_source_object_int_ptr_1, NULL);
+        dispatch_source_merge_data(self->_textureQueueEvent, (long)index);
+        
+    });
     
     //    dispatch_source_set_event_handler([[GlobalDispatchSourceQueue globalDispatchSourceQueue] global_dispatch_source], self->_textureQueueEvent); /*^{
     //                printf("HANDLER\t%s", __PRETTY_FUNCTION__);
@@ -141,12 +157,12 @@ static DispatchTest * sharedDispatchTest = NULL;
         dispatch_source = dispatch_source_create(DISPATCH_SOURCE_TYPE_DATA_ADD, 0, 0, dispatch_queue);
         dispatch_source_set_event_handler(dispatch_source, ^{
             dispatch_async(dispatch_queue, ^{
-                NSInteger index = dispatch_source_get_data(dispatch_source);
+                NSInteger index = dispatch_source_get_data(dispatch_source) - 1;
                 struct DispatchSourceObjectInt * random_integer_struct = (struct DispatchSourceObjectInt *)dispatch_queue_get_specific(dispatch_queue,
                                                                                                                                        [[NSString stringWithFormat:@"%lu", index]
                                                                                                                                         cStringUsingEncoding:NSUTF8StringEncoding]);
                 
-                NSLog(@"index = %ld\t\tRandom integer = %d", (long)index, random_integer_struct->rnd_int);
+                NSLog(@"Getting index = %ld\t\tRandom integer = %d", (long)index, random_integer_struct->rnd_int);
             });
         });
         dispatch_set_target_queue(dispatch_source, dispatch_queue);
@@ -158,20 +174,6 @@ static DispatchTest * sharedDispatchTest = NULL;
         //        dispatch_async(dispatch_queue, ^{
         
         
-    }
-    
-    struct DispatchSourceObjectInt * dispatch_source_object_int_ptr_1 = calloc(10, sizeof(struct DispatchSourceObjectInt));
-    dispatch_source_object_int_ptr_1->rnd_int = generateRandomInt();
-    
-    NSInteger index = event_index++;
-    NSLog(@"index = %ld\t\tRandom integer = %d", (long)index, dispatch_source_object_int_ptr_1->rnd_int);
-    //    dispatch_async(GlobalDispatchSourceQueue.global_dispatch_queue, ^{
-    const char *label = [[NSString stringWithFormat:@"%ld", (long)index] cStringUsingEncoding:NSUTF8StringEncoding];
-    dispatch_queue_set_specific(dispatch_queue, label, dispatch_source_object_int_ptr_1, NULL);
-    dispatch_source_merge_data(self->_textureQueueEvent, (long)index);
-    for (int i = 0; i < 10; i++)
-    {
-        [self textureQueueEvent];
     }
     
     return self->_textureQueueEvent;
